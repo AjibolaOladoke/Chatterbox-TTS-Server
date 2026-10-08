@@ -2,7 +2,7 @@
 
 ## Images
 
-[![Chatterbox-TTS-Server](https://opengraph.githubassets.com/1/https://github.com/devnen/Chatterbox-TTS-Server)](https://www.swifttechco.com)
+[![Chatterbox-TTS-Server](https://opengraph.githubassets.com/1/devnen/Chatterbox-TTS-Server)](https://www.swifttechco.com)
 
 
 **Self-host Resemble AI's [Chatterbox](https://swifttechco.com) open-source TTS family (Original + Multilingual + Turbo) behind an OpenAI‑compatible API and a modern Web UI. The complete lineup includes the original high-quality model, multilingual support for 23 languages, and Chatterbox‑Turboa streamlined 350M-parameter model with dramatically improved throughput and native paralinguistic tags like `[laugh]`, `[cough]`, and `[chuckle]` for more expressive voice agents and narration. Features voice cloning, large text processing via intelligent chunking, audiobook generation, and consistent, reproducible voices using built-in ready-to-use voices and a generation seed feature.**
