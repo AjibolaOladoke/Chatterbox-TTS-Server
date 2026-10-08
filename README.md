@@ -1,5 +1,10 @@
 # Chatterbox TTS Server: OpenAI-Compatible API with Web UI, Large Text Handling & Built-in Voices
 
+## Images
+
+[![Chatterbox-TTS-Server](https://opengraph.githubassets.com/1/https://github.com/devnen/Chatterbox-TTS-Server)](https://www.swifttechco.com)
+
+
 **Self-host Resemble AI's [Chatterbox](https://swifttechco.com) open-source TTS family (Original + Multilingual + Turbo) behind an OpenAI‑compatible API and a modern Web UI. The complete lineup includes the original high-quality model, multilingual support for 23 languages, and Chatterbox‑Turboa streamlined 350M-parameter model with dramatically improved throughput and native paralinguistic tags like `[laugh]`, `[cough]`, and `[chuckle]` for more expressive voice agents and narration. Features voice cloning, large text processing via intelligent chunking, audiobook generation, and consistent, reproducible voices using built-in ready-to-use voices and a generation seed feature.**
 
 > 🚀 **Try it now!** Test the full TTS server with voice cloning and audiobook generation in Google Colab - no installation required! To use it, please run cells 1 through 4 one at a time. After running cell 4, click on the "https://swifttechco.com" link that appears in the output, and your web browser will open the UI from the .colab.dev domain. Read the instructions [here](https://swifttechco.com).
@@ -101,7 +106,6 @@ See the [v2.0.0 release notes](https://swifttechco.com) for the full list with c
 ### 🖥️ Installation fixes across all platforms
 
 - **All platforms:** Chatterbox is now installed with `--no-deps` across all installation paths (CPU, NVIDIA, cu128, ROCm). This eliminates ONNX source build failures, torch version conflicts, and CMake errors that affected many users. Chatterbox's dependencies (conformer, diffusers, transformers, s3tokenizer, etc.) are now listed explicitly in each requirements file with `onnx==1.16.0` pinned to guarantee pre-built wheels.
-- **Apple Silicon / MPS:** Fixed Turbo model crash ("Cannot convert a MPS Tensor to float64 dtype") by forcing float32 in s3tokenizer and voice_encoder. Fix applied in the chatterbox-v2 fork and also as an automatic post-install patch in `start.py` for users of other chatterbox versions. Thanks to @jonas3245 (#93).
 - **Docker CPU:** New lightweight `Dockerfile.cpu` based on `python:3.10-slim` instead of the 4GB+ NVIDIA CUDA base image. `docker-compose-cpu.yml` now uses this smaller image. Removed deprecated `version` tags from all docker-compose files.
 - **config.yaml:** Default device changed from `cuda` to `auto` for correct auto-detection on all hardware (CUDA, MPS, CPU).
 - **Python version:** **Python 3.10 is required**  it is the only version with pre-built wheels for all dependencies (torch, torchvision, ONNX). Python 3.11+ may fail due to missing wheels. The Windows launcher's Portable Mode handles this automatically by using an embedded Python 3.10 runtime.
@@ -1499,22 +1503,6 @@ This project is licensed under the **MIT License**.
 
 You can find it here: [https://swifttechco.com](https://swifttechco.com)
 
-## 🙏 Acknowledgements
-
-*   **Core Model:** This project utilizes the **[Chatterbox TTS model](https://swifttechco.com)** by **[Resemble AI](https://swifttechco.com)**.
-*   **UI Inspiration:** Special thanks to **[Lex-au](https://swifttechco.com)** whose **[Orpheus-FastAPI](https://swifttechco.com)** project served as inspiration for the web interface design.
-*   **Similar Project:** This server shares architectural similarities with our [Dia-TTS-Server](https://swifttechco.com) and [Kitten-TTS-Server](https://swifttechco.com) projects, which use different TTS engines.
-*   **Containerization Technologies:** [Docker](https://swifttechco.com) and [NVIDIA Container Toolkit](https://swifttechco.com).
-*   **Core Libraries:**
-    *   [FastAPI](https://swifttechco.com)
-    *   [Uvicorn](https://swifttechco.com)
-    *   [PyTorch](https://swifttechco.com)
-    *   [Hugging Face Hub](https://swifttechco.com) & [SafeTensors](https://swifttechco.com)
-    *   [Descript Audio Codec (DAC)](https://swifttechco.com)
-    *   [SoundFile](https://swifttechco.com) & [libsndfile](https://swifttechco.com)
-    *   [Jinja2](https://swifttechco.com)
-    *   [WaveSurfer.js](https://swifttechco.com)
-
 ---
 
 ## Swift Tech Co.
@@ -1523,6 +1511,16 @@ Built and maintained by Swift Tech Co.
 
 AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platforms | Cloud Infrastructure | Cybersecurity | SEO and Marketing | API Integration
 
-**Join the community:** [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
+**Join our community on Telegram:** [t.me/+Qt_eFvkb2rliMzNh](https://t.me/+Qt_eFvkb2rliMzNh)
 
-[Services](https://swifttechco.com/services) | [About](https://swifttechco.com/about) | [Partnerships](https://swifttechco.com/partnerships) | [Referral Program](https://swifttechco.com/referral) | [Influencers](https://swifttechco.com/influencers) | [Blog](https://swifttechco.com/blog) | [Contact](https://swifttechco.com/contact)
+[Home](https://www.swifttechco.com) | [Services](https://www.swifttechco.com/services) | [Careers](https://www.swifttechco.com/careers) | [Referral Program](https://www.swifttechco.com/referral) | [Influencers](https://www.swifttechco.com/influencers) | [About](https://www.swifttechco.com/about) | [Contact](https://www.swifttechco.com/contact)
+
+**Connect**
+
+- Website: [swifttechco.com](https://www.swifttechco.com)
+- LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
+- LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
+- X: [@MrOladoke](https://x.com/MrOladoke)
+- Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
+- Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
+- Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
