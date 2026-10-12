@@ -6,7 +6,7 @@ Every project needs a shelf of ready answers. product and engineering is one of 
 
 ## Images
 
-[![Chatterbox-TTS-Server](images/preview.png)](https://github.com/Swift-Tech-Co)
+[![Chatterbox-TTS-Server](images/preview.png)](https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server)
 
 ## 🆕 What's New
 
@@ -260,7 +260,7 @@ This project uses specific dependency files to ensure a smooth installation for 
 
 **1. Clone the Repository**
 ```bash
-git clone https://swifttechco.com
+git clone https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 cd Chatterbox-TTS-Server
 ```
 
@@ -482,7 +482,7 @@ This is the most straightforward option and works on any machine without a compa
 # Make sure your (venv) is active
 pip install --upgrade pip
 pip install -r requirements.txt
-pip install --no-deps git+https://swifttechco.com
+pip install --no-deps git+https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 <details>
@@ -502,7 +502,7 @@ For users with NVIDIA GPUs. This provides the best performance for RTX 20/30/40 
 # Make sure your (venv) is active
 pip install --upgrade pip
 pip install -r requirements-nvidia.txt
-pip install --no-deps git+https://swifttechco.com
+pip install --no-deps git+https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 **After installation, verify that PyTorch can see your GPU:**
@@ -533,7 +533,7 @@ For users with NVIDIA Blackwell architecture GPUs that require CUDA 12.8 and sm_
 # Build and start with CUDA 12.8 support
 docker compose -f docker-compose-cu128.yml up -d
 
-# Access the web UI at https://swifttechco.com
+# Access the web UI at https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 **Manual Installation:**
@@ -545,7 +545,7 @@ pip install --upgrade pip
 pip install -r requirements-nvidia-cu128.txt
 
 # Step 2: Install chatterbox without dependencies (prevents PyTorch downgrade)
-pip install --no-deps git+https://swifttechco.com
+pip install --no-deps git+https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 ⚠️ **Critical:** The `--no-deps` flag is required to prevent PyTorch from being downgraded to a version that doesn't support Blackwell GPUs.
@@ -581,7 +581,7 @@ For users on the very latest NVIDIA stack who need CUDA 13.0 and PyTorch 2.10.
 ```bash
 docker compose -f docker-compose-cu130.yml up -d
 
-# Access the web UI at https://swifttechco.com
+# Access the web UI at https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 The `Dockerfile.cu130` installs PyTorch 2.10.0+cu130 with chatterbox-v2 via `--no-deps` so PyTorch is not downgraded.
@@ -605,7 +605,7 @@ pip install -r requirements-rocm-init.txt
 pip install -r requirements-rocm.txt
 
 # Step 3: Install chatterbox without dependencies (prevents ROCm torch overwrite)
-pip install --no-deps git+https://swifttechco.com
+pip install --no-deps git+https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 ⚠️ **Critical:** The `--no-deps` flag on chatterbox-tts is required to prevent pip from replacing the ROCm PyTorch wheels with CPU-only versions from PyPI. The `start.py` launcher handles this automatically.
@@ -652,7 +652,7 @@ tts_engine:
 **Step 3: Install remaining dependencies**
 ```bash
 # Install chatterbox-tts without its dependencies to avoid conflicts
-pip install --no-deps git+https://swifttechco.com
+pip install --no-deps git+https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 
 # Install core server dependencies
 pip install fastapi 'uvicorn[standard]' librosa safetensors soundfile pydub audiotsm praat-parselmouth python-multipart requests aiofiles PyYAML watchdog unidecode inflect tqdm
@@ -693,7 +693,7 @@ Apple Silicon requires a specific installation sequence due to dependency confli
 ```bash
 docker compose -f docker-compose-strixhalo.yml up -d
 
-# Access the web UI at https://swifttechco.com
+# Access the web UI at https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 The compose file sets `HSA_OVERRIDE_GFX_VERSION=11.0.0` and `HSA_XNACK=1` so the ROCm 7.2 wheels work on Strix Halo's GFX 11.5.0 silicon, and enables `TTS_BF16=on` for the throughput win on this hardware.
@@ -714,7 +714,7 @@ The compose file sets `HSA_OVERRIDE_GFX_VERSION=11.0.0` and `HSA_XNACK=1` so the
 ```bash
 docker compose -f docker-compose-rdna4.yml up -d
 
-# Access the web UI at https://swifttechco.com
+# Access the web UI at https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 ```
 
 The compose file sets `ROCBLAS_USE_HIPBLASLT=0` (required for stability on gfx1201) and enables `TTS_BF16=on` for throughput gain. gfx1201 is natively supported by ROCm 7.0+  no `HSA_OVERRIDE_GFX_VERSION` needed.
@@ -725,7 +725,7 @@ The compose file sets `ROCBLAS_USE_HIPBLASLT=0` (required for stability on gfx12
 
 **Want to test Chatterbox TTS Server immediately without any installation?**
 
-[![Open Live Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://swifttechco.com)
+[![Open Live Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server)
 
 ### Why Try the Demo?
 - ✅ **Full Web UI** with all controls and features
@@ -843,8 +843,8 @@ If you prefer to start the server manually:
     ```bash
     python server.py
     ```
-3.  **Access the UI:** After the server starts (and completes any initial model downloads), it should automatically attempt to open the Web UI in your default browser. If it doesn't, manually navigate to `https://swifttechco.com (e.g., `https://swifttechco.com if your configured port is 8004).
-4.  **Access API Docs:** Open `https://swifttechco.com for interactive API documentation.
+3.  **Access the UI:** After the server starts (and completes any initial model downloads), it should automatically attempt to open the Web UI in your default browser. If it doesn't, manually navigate to `https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server (e.g., `https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server if your configured port is 8004).
+4.  **Access API Docs:** Open `https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server for interactive API documentation.
 5.  **Stop the server:** Press `CTRL+C` in the terminal where the server is running.
 ```
 
@@ -1013,7 +1013,7 @@ After you have updated the code using Method 2 or 3, complete these final steps.
 *   **For NVIDIA GPU Systems (CUDA 12.8 / Blackwell):**
     ```bash
     pip install -r requirements-nvidia-cu128.txt
-    pip install --no-deps git+https://swifttechco.com
+    pip install --no-deps git+https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
     ```
 *   **For AMD GPU Systems:**
     ```bash
@@ -1046,7 +1046,7 @@ docker compose -f docker-compose-cu128.yml up -d --build
 
 ## 💡 Usage
 
-### Web UI (`https://swifttechco.com)
+### Web UI (`https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server)
 
 The most intuitive way to use the server:
 
@@ -1110,7 +1110,7 @@ The primary endpoint for TTS generation is `/tts`. The OpenAI-compatible `/v1/au
 **Example  streaming TTS:**
 
 ```bash
-curl -X POST https://swifttechco.com \
+curl -X POST https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server \
   -H "Content-Type: application/json" \
   -d '{"text":"The first chunk arrives quickly, the rest stream behind.","stream":true}' \
   --output stream.wav
@@ -1133,7 +1133,7 @@ This method uses the provided `docker-compose.yml` files to manage the container
 
 ### 1. Clone the Repository
 ```bash
-git clone https://swifttechco.com
+git clone https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 cd Chatterbox-TTS-Server
 ```
 
@@ -1182,7 +1182,7 @@ docker compose -f docker-compose-cpu.yml up -d --build
 ⭐ **Note:** The first time you run this, Docker will build the image and download model files, which can take some time. Subsequent starts will be much faster.
 
 ### 3. Access the Application
-Open your web browser to `https://swifttechco.com (e.g., `https://swifttechco.com or the host port you configured).
+Open your web browser to `https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server (e.g., `https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server or the host port you configured).
 
 ### 4. Verify GPU Access
 
@@ -1474,7 +1474,7 @@ Contributions are welcome! Please feel free to open an issue to report bugs or s
 
 This project is licensed under the **MIT License**.
 
-You can find it here: https://swifttechco.com
+You can find it here: https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 
 ---
 
@@ -1490,13 +1490,21 @@ Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: swifttechco.com
+- Website: https://github.com/Swift-Tech-Co/Chatterbox-TTS-Server
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [devnen/Chatterbox-TTS-Server](https://github.com/devnen/Chatterbox-TTS-Server) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
 ## Sources
 
