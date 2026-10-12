@@ -1,39 +1,12 @@
-# Chatterbox TTS Server: OpenAI-Compatible API with Web UI, Large Text Handling & Built-in Voices
+# Chatterbox-TTS-Server
+
+## What This Is
+
+Every project needs a shelf of ready answers. product and engineering is one of those shelves, and Chatterbox-TTS-Server is the entry on it - the notes, patterns and fixes we reuse when this kind of work comes up.
 
 ## Images
 
-[![Chatterbox-TTS-Server](https://opengraph.githubassets.com/1/devnen/Chatterbox-TTS-Server)](https://www.swifttechco.com)
-
-
-**Self-host Resemble AI's [Chatterbox](https://swifttechco.com) open-source TTS family (Original + Multilingual + Turbo) behind an OpenAI‑compatible API and a modern Web UI. The complete lineup includes the original high-quality model, multilingual support for 23 languages, and Chatterbox‑Turboa streamlined 350M-parameter model with dramatically improved throughput and native paralinguistic tags like `[laugh]`, `[cough]`, and `[chuckle]` for more expressive voice agents and narration. Features voice cloning, large text processing via intelligent chunking, audiobook generation, and consistent, reproducible voices using built-in ready-to-use voices and a generation seed feature.**
-
-> 🚀 **Try it now!** Test the full TTS server with voice cloning and audiobook generation in Google Colab - no installation required! To use it, please run cells 1 through 4 one at a time. After running cell 4, click on the "https://swifttechco.com" link that appears in the output, and your web browser will open the UI from the .colab.dev domain. Read the instructions [here](https://swifttechco.com).
-> 
-> [![Open Live Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://swifttechco.com)
-
-This server is based on the architecture and UI of our [Dia-TTS-Server](https://swifttechco.com) project but uses the distinct `chatterbox-tts` engine. Runs accelerated on NVIDIA (CUDA), AMD (ROCm), and Apple Silicon (MPS) GPUs, with a fallback to CPU. Make sure you also check our [Kitten-TTS-Server](https://swifttechco.com) project.
-
-[![Project Link](https://img.shields.io/badge/GitHub-devnen/Chatterbox--TTS--Server-blue?style=for-the-badge&logo=github)](https://swifttechco.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![Python Version](https://img.shields.io/badge/Python-3.10_(required)-blue.svg?style=for-the-badge)](https://swifttechco.com)
-[![Framework](https://img.shields.io/badge/Framework-FastAPI-green.svg?style=for-the-badge)](https://swifttechco.com)
-[![Model Source](https://img.shields.io/badge/Model-ResembleAI/chatterbox-orange.svg?style=for-the-badge)](https://swifttechco.com)
-[![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg?style=for-the-badge)](https://swifttechco.com)
-[![Web UI](https://img.shields.io/badge/Web_UI-Included-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
-[![CUDA Compatible](https://img.shields.io/badge/NVIDIA_CUDA-Compatible-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](https://swifttechco.com)
-[![ROCm Compatible](https://img.shields.io/badge/AMD_ROCm-Compatible-ED1C24?style=for-the-badge&logo=amd&logoColor=white)](https://swifttechco.com)
-[![MPS Compatible](https://img.shields.io/badge/Apple_MPS-Compatible-000000?style=for-the-badge&logo=apple&logoColor=white)](https://swifttechco.com)
-[![API](https://img.shields.io/badge/OpenAI_Compatible_API-Ready-000000?style=for-the-badge&logo=openai&logoColor=white)](https://swifttechco.com)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://swifttechco.com)
-
-<div align="center">
-  <img src="static/screenshot-d.png" alt="Chatterbox TTS Server Web UI - Dark Mode" width="33%" />
-  <img src="static/screenshot-l.png" alt="Chatterbox TTS Server Web UI - Light Mode" width="33%" />
-</div>
-
-> 📦 **Portable Mode (Windows):** This application supports a fully portable installation  the entire folder, including Python and all dependencies, is self-contained. Copy it to a USB drive, share it as a zip, or move it anywhere. Just double-click `start.bat`  no Python installation needed on the target machine. [Learn more →](#-portable-mode-windows)
-
----
+[![Chatterbox-TTS-Server](images/preview.png)](https://github.com/Swift-Tech-Co)
 
 ## 🆕 What's New
 
@@ -52,7 +25,7 @@ v2.0 ships the complete Chatterbox family on every major GPU stack behind one Op
 - **Dynamic language selector**  the UI populates the language dropdown from `SUPPORTED_LANGUAGES` exposed by the multilingual engine.
 - **Chunker fix**  stray dashes in narrative text no longer get treated as bullet items that swallow the rest of the paragraph (#144).
 
-See the [v2.0.0 release notes](https://swifttechco.com) for the full list with contributor credits.
+See the v2.0.0 release notes for the full list with contributor credits.
 
 ### 📦 Portable Mode for Windows (new)
 
@@ -124,9 +97,9 @@ See the [v2.0.0 release notes](https://swifttechco.com) for the full list with c
 
 ## 🗣️ Overview: Enhanced Chatterbox TTS Generation
 
-The [Chatterbox TTS model by Resemble AI](https://swifttechco.com) provides capabilities for generating high-quality speech. This project builds upon that foundation by providing a robust [FastAPI](https://swifttechco.com) server that makes Chatterbox significantly easier to use and integrate.
+The Chatterbox TTS model by Resemble AI provides capabilities for generating high-quality speech. This project builds upon that foundation by providing a robust FastAPI server that makes Chatterbox significantly easier to use and integrate.
 
-**🚀 Want to try it instantly?** [Launch the live demo in Google Colab](https://swifttechco.com) - no installation needed!
+**🚀 Want to try it instantly?** Launch the live demo in Google Colab - no installation needed!
 
 The server expects plain text input for synthesis and we solve the complexity of setting up and running the model by offering:
 
@@ -147,7 +120,7 @@ This server is your gateway to leveraging Chatterbox's TTS capabilities seamless
 ## ✨ Key Features of This Server
 
 **🔥 Live Demo Available:**
-*   **🚀 [One-Click Google Colab Demo](https://swifttechco.com):** Try the full server with voice cloning and audiobook generation instantly in your browser - no local installation required!
+*   **🚀 One-Click Google Colab Demo:** Try the full server with voice cloning and audiobook generation instantly in your browser - no local installation required!
 
 This server application enhances the underlying `chatterbox-tts` engine with the following:
 
@@ -199,13 +172,13 @@ This server application enhances the underlying `chatterbox-tts` engine with the
 
 ## ✅ Features Summary
 
-*   **Core Chatterbox Capabilities (via [Resemble AI Chatterbox](https://swifttechco.com)):**
+*   **Core Chatterbox Capabilities (via Resemble AI Chatterbox):**
     *   🗣️ High-quality single-speaker voice synthesis from plain text.
     *   🎤 Perform voice cloning using reference audio prompts.
     *   🎯 **Complete model family:** Original Chatterbox (English, emotion control), Chatterbox Multilingual (23 languages), and Chatterbox‑Turbo (fastest, paralinguistic tags).
     *   🔄 **Hot-swappable engines:** Switch between all three models instantly via dropdownno restarts needed.
 *   **Enhanced Server & API:**
-    *   ⚡ Built with the high-performance **[FastAPI](https://swifttechco.com)** framework.
+    *   ⚡ Built with the high-performance **FastAPI** framework.
     *   ⚙️ **Custom API Endpoint** (`/tts`) as the primary method for programmatic generation, exposing all key parameters.
     *   📄 Interactive API documentation via Swagger UI (`/docs`).
     *   🩺 Health check endpoint (`/api/ui/initial-data` also serves as a comprehensive status check).
@@ -231,10 +204,10 @@ This server application enhances the underlying `chatterbox-tts` engine with the
     *   ✂️ **Chunking Controls:** Enable/disable text splitting and adjust approximate chunk size.
     *   ⚠️ **Warning Modals:** Optional warnings for chunking voice consistency and general generation quality.
     *   🌓 **Light/Dark Mode:** Toggle between themes with preference saved locally.
-    *   🔊 **Audio Player:** Integrated waveform player ([WaveSurfer.js](https://swifttechco.com)) for generated audio with download option.
+    *   🔊 **Audio Player:** Integrated waveform player (WaveSurfer.js) for generated audio with download option.
     *   ⏳ **Loading Indicator:** Shows status during generation.
 *   **Flexible & Efficient Model Handling:**
-    *   ☁️ Downloads models automatically from [Hugging Face Hub](https://swifttechco.com) using `ChatterboxTTS.from_pretrained()`.
+    *   ☁️ Downloads models automatically from Hugging Face Hub using `ChatterboxTTS.from_pretrained()`.
     *   🔄 Easily specify model repository via `config.yaml`.
     *   📄 Optional `download_model.py` script available to pre-download specific model components to a local directory (this is separate from the main HF cache used at runtime).
 *   **Performance & Configuration:**
@@ -243,7 +216,7 @@ This server application enhances the underlying `chatterbox-tts` engine with the
     *   📦 Uses standard Python virtual environments.
     *   📦 **Portable Mode (Windows):** Self-contained installation that can be copied, moved, or shared  no Python needed on the target machine.
 *   **Docker Support:**
-    *   🐳 Containerized deployment via [Docker](https://swifttechco.com) and Docker Compose.
+    *   🐳 Containerized deployment via Docker and Docker Compose.
     *   🔌 NVIDIA GPU acceleration with Container Toolkit integration.
     *   💾 Persistent volumes for models (HF cache), custom voices, outputs, logs, and config.
     *   🚀 One-command setup and deployment (`docker compose up -d`).
@@ -251,15 +224,15 @@ This server application enhances the underlying `chatterbox-tts` engine with the
 ## 🔩 System Prerequisites
 
 *   **Operating System:** Windows 10/11 (64-bit) or Linux (Debian/Ubuntu recommended).
-*   **Python:** Version **3.10 required** ([Download](https://swifttechco.com)). Python 3.10 is the only version with pre-built wheels for all dependencies (torch, torchvision, ONNX, ONNXRuntime). **Python 3.11+ is not supported**  key dependencies lack pre-built wheels, causing build failures. On Windows, the launcher's Portable Mode automatically uses an embedded Python 3.10 runtime regardless of your system Python version. *When using Portable Mode, Python is only needed on the machine where you first set up the application.*
-*   **Git:** For cloning the repository ([Download](https://swifttechco.com)).
+*   **Python:** Version **3.10 required** (Download). Python 3.10 is the only version with pre-built wheels for all dependencies (torch, torchvision, ONNX, ONNXRuntime). **Python 3.11+ is not supported**  key dependencies lack pre-built wheels, causing build failures. On Windows, the launcher's Portable Mode automatically uses an embedded Python 3.10 runtime regardless of your system Python version. *When using Portable Mode, Python is only needed on the machine where you first set up the application.*
+*   **Git:** For cloning the repository (Download).
 *   **Internet:** For downloading dependencies and models from Hugging Face Hub.
 *   **Disk Space:** 10GB+ recommended (for dependencies and model cache).
 *   **(Optional but HIGHLY Recommended for Performance):**
-    *   **NVIDIA GPU (CUDA 12.1):** CUDA-compatible (Maxwell architecture or newer, RTX 20/30/40 series). Check [NVIDIA CUDA GPUs](https://swifttechco.com).
+    *   **NVIDIA GPU (CUDA 12.1):** CUDA-compatible (Maxwell architecture or newer, RTX 20/30/40 series). Check NVIDIA CUDA GPUs.
     *   **NVIDIA GPU (CUDA 12.8):** RTX 5090 or other Blackwell-based GPUs, driver version 570+.
-    *   **NVIDIA Drivers:** Latest version for your GPU/OS ([Download](https://swifttechco.com)).
-    *   **AMD GPU:** ROCm-compatible (e.g., RX 6000/7000 series). Check [AMD ROCm GPUs](https://swifttechco.com).
+    *   **NVIDIA Drivers:** Latest version for your GPU/OS (Download).
+    *   **AMD GPU:** ROCm-compatible (e.g., RX 6000/7000 series). Check AMD ROCm GPUs.
     *   **AMD Drivers:** Latest ROCm-compatible drivers for your GPU/OS (Linux only).
     *   **Apple Silicon:** M1, M2, M3, M4, or newer Apple Silicon chips with macOS 12.3+ for MPS acceleration.
 *   **(Linux Only):**
@@ -734,7 +707,7 @@ The compose file sets `HSA_OVERRIDE_GFX_VERSION=11.0.0` and `HSA_XNACK=1` so the
 
 **Prerequisites:**
 - AMD RDNA4 GPU (RX 9070 / 9070 XT / R9700) on Linux
-- ROCm 7.2+ stack installed on the host (see [ROCm install guide](https://swifttechco.com))
+- ROCm 7.2+ stack installed on the host (see ROCm install guide)
 - User in `video` and `render` groups: `sudo usermod -aG video,render $USER`
 
 **Using Docker (recommended):**
@@ -1148,11 +1121,11 @@ Run Chatterbox TTS Server easily using Docker. The recommended method uses Docke
 
 ## Prerequisites
 
-*   [Docker](https://swifttechco.com) installed.
-*   [Docker Compose](https://swifttechco.com) installed (usually included with Docker Desktop).
+*   Docker installed.
+*   Docker Compose installed (usually included with Docker Desktop).
 *   **(For GPU acceleration)**
-    *   **NVIDIA:** Up-to-date drivers and the [NVIDIA Container Toolkit](https://swifttechco.com) installed.
-    *   **AMD:** Up-to-date [ROCm drivers](https://swifttechco.com) installed on a Linux host. User must be in `video` and `render` groups.
+    *   **NVIDIA:** Up-to-date drivers and the NVIDIA Container Toolkit installed.
+    *   **AMD:** Up-to-date ROCm drivers installed on a Linux host. User must be in `video` and `render` groups.
 
 ## Using Docker Compose (Recommended)
 
@@ -1183,7 +1156,7 @@ docker compose -f docker-compose-cu130.yml up -d --build
 ```
 
 #### **For AMD ROCm GPU (Linux only):**
-**Prerequisites:** Ensure you have [ROCm drivers](https://swifttechco.com) installed on your host system and your user is in the required groups:
+**Prerequisites:** Ensure you have ROCm drivers installed on your host system and your user is in the required groups:
 ```bash
 # Add your user to required groups (one-time setup)
 sudo usermod -a -G video,render $USER
@@ -1289,7 +1262,7 @@ lspci | grep VGA
 
 ### **ROCm Compatibility Notes**
 
-*   **Supported GPUs:** AMD Instinct data center GPUs and select Radeon GPUs. Check the [ROCm compatibility list](https://swifttechco.com).
+*   **Supported GPUs:** AMD Instinct data center GPUs and select Radeon GPUs. Check the ROCm compatibility list.
 *   **Operating System:** ROCm is currently supported only on Linux systems.
 *   **Performance:** AMD GPUs with ROCm provide excellent performance for ML workloads, with support for mixed-precision training.
 *   **PyTorch Version:** Uses PyTorch 2.5.1 with ROCm 6.1 from PyTorch's official wheel index for optimal compatibility.
@@ -1501,7 +1474,7 @@ Contributions are welcome! Please feel free to open an issue to report bugs or s
 
 This project is licensed under the **MIT License**.
 
-You can find it here: [https://swifttechco.com](https://swifttechco.com)
+You can find it here: https://swifttechco.com
 
 ---
 
@@ -1513,14 +1486,22 @@ AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platf
 
 **Join our community on Telegram:** [t.me/+Qt_eFvkb2rliMzNh](https://t.me/+Qt_eFvkb2rliMzNh)
 
-[Home](https://www.swifttechco.com) | [Services](https://www.swifttechco.com/services) | [Careers](https://www.swifttechco.com/careers) | [Referral Program](https://www.swifttechco.com/referral) | [Influencers](https://www.swifttechco.com/influencers) | [About](https://www.swifttechco.com/about) | [Contact](https://www.swifttechco.com/contact)
+Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: [swifttechco.com](https://www.swifttechco.com)
+- Website: swifttechco.com
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [devnen/Chatterbox-TTS-Server](https://github.com/devnen/Chatterbox-TTS-Server) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
